@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../index.css">
+    <title>Noticias de Chivilcoy - Detalle de Noticia</title>
+</head>
+
+<body>
+    <header>
+        <div class="top-bar">
+            <span class="fecha"></span>
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a href="#" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="#" target="_blank"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" target="_blank"><i class="bi bi-youtube"></i></a>
+            </div>
+        </div>
+        <div class="header-main">
+            <a href="../index.html" class="logo"><img src="../img/logo.png" alt="Noticias de Chivilcoy" class="logo"></a>
+        </div>
+        <nav class="main-nav">
+            <div class="hamburger">
+                <i class="bi bi-list"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html" class="categoria">INICIO</a></li>
+                <li class="dropdown">
+                    <a>CATEGORIAS</a>
+                    <ul class="dropdown-content">
+                        <li><a href="./categoria.html?categoria=locales" class="categoria">LOCALES</a></li>
+                        <li><a href="./categoria.html?categoria=mundo" class="categoria">MUNDO</a></li>
+                        <li><a href="./categoria.html?categoria=deportes" class="categoria">DEPORTES</a></li>
+                        <li><a href="./categoria.html?categoria=tecnologia" class="categoria">TECNOLOGIA</a></li>
+                        <li><a href="./categoria.html?categoria=cultura" class="categoria">CULTURA</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a>SECCIONES</a>
+                    <ul class="dropdown-content">
+                        <li><a href="./quienesSomos.html">Quienes somos</a></li>
+                        <li><a href="./contacto.html">Contacto</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="buscador">
+                <input type="text" placeholder="Buscar">
+                <button onclick="buscador()"><i class="bi bi-search"></i></button>
+                <i class="bi bi-bell-fill subscripcion" onclick="abrirSubscripcion()"></i>
+            </div>
+        </nav>
+    </header>
+
+    <section class="noticias-detail">
+        <div class="noticia-container">
+            <div class="comentarios">
+                <div>
+                    <h3>Comentarios</h3>
+                </div>
+                <div class="comentarios-container"></div>
+                <div class="form-comentarios">
+                    <i class="bi bi-chat-dots"></i>
+                    <h3>Escribe un comentario</h3>
+                    <div class="form">
+                        <input type="text" name="" class="nombre" placeholder="Su nombre" required>
+                        <textarea name="" class="comentario" placeholder="Su comentario" required></textarea>
+                        <button class="boton-submit" type="submit" onclick="enviarComentario()">Comentar</button>
+                    </div>
+                    <p class="mensaje-comentario"></p>
+                </div>
+            </div>
+        </div>
+        <div class="noticias-relacionadas">
+            <p>Articulos relacionados</p>
+            <div class="noticias">
+                <!-- noticias traidas desde javascript -->
+            </div>
+        </div>
+    </section>
+    <div class="overlay">
+        <div class="results"></div>
+        <button class="close-btn" onclick="cerrarOverlay()">Cerrar</button>
+    </div>
+    <div class="overlay-subscripcion">
+        <div class="subscripcion">
+            <label for="">Ingresa tu email para subscribirte o anular tu subscripcion!!</label>
+            <input type="email" name="" id="" placeholder="Ingresa tu email">
+            <div>
+                <button class="anular-subscripcion"  onclick="anularSubscripcion()">Anular subscripcion</button>
+                <button class="subscribirse" onclick="subscribirse()">Subscribirse</button>
+            </div>
+            <p class="mensaje"></p>
+            <i class="bi bi-x-lg" onclick="cerrarSubscripcion()"></i>
+        </div>     
+    </div>
+    <footer>
+        <div class="footer-contenido">
+            <div class="footer-columna">
+                <h3>Categorías</h3>
+                <ul>
+                    <li><a href="./categoria.html?categoria=locales" class="categoria">LOCALES</a></li>
+                    <li><a href="./categoria.html?categoria=mundo" class="categoria">MUNDO</a></li>
+                    <li><a href="./categoria.html?categoria=deportes" class="categoria">DEPORTES</a></li>
+                    <li><a href="./categoria.html?categoria=tecnologia" class="categoria">TECNOLOGIA</a></li>
+                    <li><a href="./categoria.html?categoria=cultura" class="categoria">CULTURA</a></li>
+                </ul>
+            </div>
+            <div class="footer-columna">
+                <h3>Secciones</h3>
+                <ul>
+                    <li><a href="./quienesSomos.html">Quienes somos</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-columna">
+                <h3>Redes Sociales</h3>
+                <ul>
+                    <li><a href="#"><i class="bi bi-facebook"></i> Facebook</a></li>
+                    <li><a href="#"><i class="bi bi-instagram"></i> Instagram</a></li>
+                    <li><a href="#"><i class="bi bi-twitter-x"></i> Twitter</a></li>
+                    <li><a href="#"><i class="bi bi-youtube"></i> Youtube</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-copy">
+            <p>&copy; 2024 Noticias de Chivilcoy. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="../js/comentarios.js"></script>
+    <script src="../js/detalleArticulo.js"></script>
+    <script src="../js/interacciones.js"></script>
+</body>
+
+</html>
